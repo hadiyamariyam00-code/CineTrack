@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="app">
       <Navbar />
+      <main className='pt-20'>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchPage />} />
@@ -20,6 +21,7 @@ function App() {
         <Route path="/watched" element={<WatchedPage />} />
         <Route path="/stats" element={<StatsPage />} />
       </Routes>
+      </main>
      </div>
   )
 }
