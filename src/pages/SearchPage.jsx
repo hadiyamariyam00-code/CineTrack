@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { searchMovies } from "../api/omdb";
 import useLocalStorage from "../hooks/useLocalStorage";
+import MovieModal from "../components/MovieModal";
 
 function SearchPage() {
     const [searchParams, setSearchParams] = useSearchParams()
     const urlQuery = searchParams.get('q') || ''
+
+    const [selectedMovie, setSelectedMovie] = useState(null)
 
     const [query, setQuery] = useState(urlQuery)
     const [movies, setMovies] = useState([])
@@ -57,7 +60,7 @@ function SearchPage() {
     }
 
     return (
-        <div className="search-page p-8 max-w-6xl mx-auto">
+        <div className="search-page p-10 max-w-6xl mx-auto">
             {/* Compact search bar for refining, not the full hero */}
             <form onSubmit={handleSearch} className="mb-8 max-w-md">
                 <div className="relative flex items-center">
@@ -79,7 +82,7 @@ function SearchPage() {
                     />
                     <button
                         type="submit"
-                        className="absolute right-1.5  text-white w-8 h-8 rounded-full
+                        className="absolute right-1.5 bg-cinema-accent text-white w-8 h-8 rounded-full
                                    flex items-center justify-center hover:opacity-90 hover:scale-105 transition-all"
                     >
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,14 +117,14 @@ function SearchPage() {
                                 className="w-full aspect-[2/3] object-cover"
                             />
                             <div className="p-3 flex flex-col flex-1">
-                                <h3 className="font-display text-lg tracking-wide text-white truncate">
+                                <h3 className="font-display-bebas text-lg tracking-wide text-white truncate">
                                     {movie.Title}
                                 </h3>
                                 <p className="text-gray-400 text-sm mb-3">{movie.Year}</p>
                                 <button
                                     onClick={() => addToWatchlist(movie)}
                                     disabled={inWatchlist}
-                                    className="mt-auto bg-cinema-cta disabled:bg-gray-600 text-white py-2
+                                    className="mt-auto bg-cinema-accent disabled:bg-gray-600 text-white py-2
                                                rounded-md font-semibold hover:opacity-90 transition"
                                 >
                                     {inWatchlist ? 'Added ✓' : 'Add to Watchlist'}
