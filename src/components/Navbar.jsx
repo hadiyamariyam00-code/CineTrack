@@ -30,7 +30,7 @@ function Navbar() {
         }`
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-5
+        <nav className={`fixed top-0 left-0 right-0 z-50 flex flex-wrap items-center justify-between px-10 py-5
                          bg-gradient-to-b from-black/80 via-black/40 to-transparent
                          transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
            <span className='font-display-bebas text-3xl text-cinema-accent tracking-wider'>

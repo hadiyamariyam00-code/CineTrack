@@ -107,9 +107,11 @@ function SearchPage() {
                     return (
                         <div
                             key={movie.imdbID}
+                            onClick={() => setSelectedMovie(movie.imdbID)}
                             className="movie-card bg-cinema-card rounded-lg overflow-hidden shadow-md
                                        flex flex-col border border-transparent
-                                       hover:border-cinema-accent/40 hover:-translate-y-1 transition-all duration-200"
+                                       hover:border-cinema-accent/40 hover:-translate-y-1 transition-all duration-200
+                                       cursor-pointer"
                         >
                             <img
                                 src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/200x300?text=No+Image'}
@@ -122,7 +124,10 @@ function SearchPage() {
                                 </h3>
                                 <p className="text-gray-400 text-sm mb-3">{movie.Year}</p>
                                 <button
-                                    onClick={() => addToWatchlist(movie)}
+                                    onClick={(e) => {
+                                        e.stopPropagation()
+                                        addToWatchlist(movie)
+                                    }}
                                     disabled={inWatchlist}
                                     className="mt-auto bg-cinema-accent disabled:bg-gray-600 text-white py-2
                                                rounded-md font-semibold hover:opacity-90 transition"
@@ -134,6 +139,13 @@ function SearchPage() {
                     )
                 })}
             </div>
+
+            {selectedMovie && (
+                <MovieModal
+                    imdbID={selectedMovie}
+                    onClose={() => setSelectedMovie(null)}
+                />
+            )}
         </div>
     )
 }

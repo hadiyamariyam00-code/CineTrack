@@ -1,16 +1,71 @@
-# React + Vite
+CineTrack 
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive personal movie tracking web app built with React.js and styled with Tailwind CSS. CineTrack allows users to discover movies, manage a personal watchlist, and log what you've watched with your own ratings and notes. Includes personal stats on your viewing habits.
 
-Currently, two official plugins are available:
+Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[Link here]()
 
-## React Compiler
+Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Search for movies via a REST API
+- Add movies to your watchlist
+- Mark movies as watched
+- Rate movies and add personal notes
+- View stats on your watching habits
+- Data persists locally (no account/login needed)
 
-## Expanding the Oxlint configuration
+Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- React — frontend
+- Vite — build tool
+- Tailwind CSS — styling
+- REST API — fetching movie data
+- LocalStorage — storing watchlist, ratings, and notes
+
+
+Getting Started
+
+ Prerequisites
+
+- Node.js (v16 or higher recommended)
+- npm
+
+Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/cinetrack.git
+
+# Move into the project folder
+cd cinetrack
+
+# Install dependencies
+npm install
+```
+
+API
+
+Uses an API key from the [OMDb API](https://www.omdbapi.com/) (public).
+
+Running the App
+
+```bash
+npm run dev
+```
+
+Usage
+
+1. Search for a movie using the search bar
+2. Add it to your watchlist
+3. Once you've watched it, mark it as watched
+4. Rate it and add any personal notes
+5. Check your stats to see your watching trends over time
+
+Future Enhancements
+
+- Add filtering/sorting on watchlist
+- Share current stats
+- Dark mode
+- Movie recommendations based on ratings
+
