@@ -14,7 +14,7 @@ function HomePage() {
 
     return (
         <div
-            className="relative flex flex-col items-center justify-center text-center px-6 pt-16 pb-20"
+            className="relative flex flex-col items-center justify-center text-center px-6 pt-41 pb-20 -mt-20"
             style={{
                 minHeight: '75vh',
                 backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(10,10,15,0.9) 100%), url(${interstellarBg})`,
@@ -22,13 +22,13 @@ function HomePage() {
                 backgroundPosition: 'center',
             }}
         >
-            <p className="italic text-gray-300 text-sm mb-4 opacity-70">
+             <p className="italic font-display-oswald text-gray-300 text-sm mb-6 opacity-70">
                 "We are the explorers, the wanderers, the pioneers."
             </p>
-            <h1 className="text-font-display text-4xl md:text-5xl font-bold text-white mb-3 tracking-tight">
+            <h1 className="font-display-bebas text-5xl md:text-6xl text-white mb-4 tracking-wide">
                 Track every movie you watch.
             </h1>
-            <h3 className="text-gray-400 text-xl mb-8">
+            <h3 className="font-display-oswald text-gray-400 text-lg mb-8 font-light">
                 Search, save, and rate every film you've seen.
             </h3>
 
@@ -52,7 +52,7 @@ function HomePage() {
                     />
                     <button
                         type="submit"
-                        className="absolute right-1.5 bg-cinema-cta text-white w-9 h-9 rounded-full
+                        className="absolute right-1.5 bg-cinema-accent text-white w-9 h-9 rounded-full
                                    flex items-center justify-center hover:opacity-90 hover:scale-105
                                    transition-all shadow-md shadow-cinema-cta/30"
                     >
