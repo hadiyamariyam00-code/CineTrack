@@ -14,14 +14,13 @@ function HomePage() {
 
     return (
         <div
-            className="relative flex flex-col items-center justify-center text-center px-6 pt-41 pb-20 -mt-20"
+            className="relative flex flex-col items-center justify-center text-center px-6 pt-41 pb-20 -mt-20 bg-center md:bg-[center_30%]"
             style={{
                 minHeight: '75vh',
                 backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(10,10,15,0.9) 100%), url(${interstellarBg})`,
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
             }}
-        >
+>
              <p className="italic font-display-oswald text-gray-300 text-sm mb-6 opacity-70">
                 "We are the explorers, the wanderers, the pioneers."
             </p>
