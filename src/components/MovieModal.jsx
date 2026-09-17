@@ -19,7 +19,7 @@ function MovieModal({ imdbID, onClose }) {
             onClick={onClose}
         >
             <div
-                className="bg-cinema-card rounded-lg max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl"
+                className="relative bg-cinema-card rounded-lg max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
             >
                 {loading ? (

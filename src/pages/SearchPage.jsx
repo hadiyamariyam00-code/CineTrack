@@ -108,7 +108,6 @@ function SearchPage() {
                         <div
                             key={movie.imdbID}
                             onClick={() => {
-                                conole.log('card clicked',movie.imdbID)
                                 setSelectedMovie(movie.imdbID)
                             }}
                             className="movie-card bg-cinema-card rounded-lg overflow-hidden shadow-md
