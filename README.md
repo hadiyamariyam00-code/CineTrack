@@ -4,7 +4,7 @@ A responsive personal movie tracking web app built with React.js and styled with
 
 Live Demo
 
-[Link here]()
+[Link here](cinetrack-movietracker.vercel.app/)
 
 Features
 
